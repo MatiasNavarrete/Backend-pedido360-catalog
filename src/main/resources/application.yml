@@ -1,4 +1,8 @@
 spring:
+  cloud:
+    azure:
+      servicebus:
+        connection-string: "Endpoint=sb://dummy.servicebus.windows.net/;SharedAccessKeyName=dummy;SharedAccessKey=dummyKey123="
   datasource:
     url: jdbc:mysql://localhost:3306/pedidos360_catalog?createDatabaseIfNotExist=true
     username: root
@@ -8,5 +12,10 @@ spring:
     hibernate:
       ddl-auto: update
     show-sql: true
+
+app:
+  mensajeria:
+    cola-pedidos: "pedidos-queue" # Alineado completamente a la izquierda
+
 server:
   port: 8082
