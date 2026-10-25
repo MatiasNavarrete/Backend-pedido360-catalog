@@ -2,7 +2,7 @@ spring:
   cloud:
     azure:
       servicebus:
-        connection-string: "Endpoint=sb://dummy.servicebus.windows.net/;SharedAccessKeyName=dummy;SharedAccessKey=dummyKey123="
+        connection-string: "Endpoint=sb://sb-pedidos360-admin.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=+KfC7BReo8KZlYU0J7rMTqNVEEjnZzYXZ+ASbKEgY/I="
   datasource:
     url: jdbc:mysql://localhost:3306/pedidos360_catalog?createDatabaseIfNotExist=true
     username: root
@@ -15,7 +15,6 @@ spring:
 
 app:
   mensajeria:
-    cola-pedidos: "pedidos-queue" # Alineado completamente a la izquierda
-
+    cola-pedidos: "cola-pedidos"
 server:
   port: 8082
